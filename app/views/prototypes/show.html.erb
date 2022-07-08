@@ -53,7 +53,8 @@
             <li class="comments_list">
             <p>
             <%= comment.content %>
-            <%= link_to comment.user.name, user_path(@prototype.user), class: :comment_user %>
+            <%= link_to "by #{comment.user.name}", user_path(comment.user), class: :comment_user %>
+            <%# <%= link_to comment.user.name, user_path(@prototype.user), class: :comment_user %>
             </p>
             </li>
             <% end %>
